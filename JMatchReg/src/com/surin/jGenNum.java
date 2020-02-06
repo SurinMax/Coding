@@ -1,5 +1,7 @@
 package com.surin;
 
+import java.util.Random;
+
 public class jGenNum {
     /**
      * Генерирует целое цисло между диапазоном двух чисел
@@ -8,7 +10,8 @@ public class jGenNum {
      * @return сгенерированное число
      */
     public static int genInt(int start, int end){
-        return start + (int) (Math.random()*end);
+        Random random = new Random();
+        return random.nextInt((end - start) + 1) + start;
     }
 
     /**
