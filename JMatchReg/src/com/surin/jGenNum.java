@@ -7,11 +7,15 @@ public class jGenNum {
      * Генерирует целое цисло между диапазоном двух чисел
      * @param start начальное число
      * @param end конечное число
-     * @return сгенерированное число
      */
     public static int genInt(int start, int end){
         Random random = new Random();
-        return random.nextInt((end - start) + 1) + start;
+        try {
+            return random.nextInt((end - start) + 1) + start;
+        }
+        catch (IllegalArgumentException e){
+            return -1;
+        }
     }
 
     /**
@@ -21,11 +25,20 @@ public class jGenNum {
      * @return если меньше нуля - false(нельзя использовать), true - в противном случае
      */
     public static boolean checkMath(int a, int b){
-        if ((a-b)<0){
+        if ((a-b)<0 || a == -1 || b == -1){
             return false;
         }
         else {
             return true;
         }
+    }
+
+    /**
+     * Функиия дозапи
+     * @param pathToFile
+     * @param lineWrite
+     */
+    public static void WriteToFile(String pathToFile, String lineWrite){
+
     }
 }

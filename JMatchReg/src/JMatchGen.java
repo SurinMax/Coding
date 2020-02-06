@@ -5,11 +5,17 @@ public class JMatchGen {
         System.out.println("Список примеров:");
         int i = 1; //Начальное условие
         int countGenMath = 20;//Сколько примеров нужно сгенерировать
-        int start = 11;//начальное число для генерации
-        int end = 99;//конечное число дле генерации
+        int start = 10;//начальное число для генерации
+        int end = 50;//конечное число дле генерации
+        int firstNum,lastNum;
+        int exitGen = 100;
         do{
-            int firstNum = jGenNum.genInt(start,end);
-            int lastNum = jGenNum.genInt(start,end);
+            firstNum = jGenNum.genInt(start,end);
+            lastNum = jGenNum.genInt(start,end);
+            if (firstNum == -1 || lastNum == -1){
+                System.out.println("Ошибочные начальные условия");
+                i=exitGen;
+            }
             if (jGenNum.checkMath(firstNum,lastNum)){
                 System.out.println(i+": "+firstNum + "-" + lastNum);
                 i++;
