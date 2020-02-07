@@ -1,5 +1,7 @@
 package com.surin;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 
 public class jGenNum {
@@ -34,11 +36,20 @@ public class jGenNum {
     }
 
     /**
-     * Функиия дозапи
+     * Функиия записи/дозаписи примеров в файл
      * @param pathToFile
      * @param lineWrite
      */
     public static void WriteToFile(String pathToFile, String lineWrite){
+        try {
+            FileWriter fw = new FileWriter(pathToFile,true);
+            fw.write(lineWrite);
+            fw.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }
