@@ -3,6 +3,7 @@ package com.surin;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Scanner;
 
 public class jGenNum {
     /**
@@ -12,12 +13,7 @@ public class jGenNum {
      */
     public static int genInt(int start, int end){
         Random random = new Random();
-        try {
-            return random.nextInt((end - start) + 1) + start;
-        }
-        catch (IllegalArgumentException e){
-            return -1;
-        }
+        return random.nextInt((end - start) + 1) + start;
     }
 
     /**
@@ -26,14 +22,10 @@ public class jGenNum {
      * @param b второе число
      * @return если меньше нуля - false(нельзя использовать), true - в противном случае
      */
-    public static boolean checkMath(int a, int b){
-        if ((a-b)<0 || a == -1 || b == -1){
-            return false;
-        }
-        else {
-            return true;
-        }
+    public static boolean checkMath(int a, int b, String oper){
+        return false;
     }
+
 
     /**
      * Функиия записи/дозаписи примеров в файл
@@ -49,7 +41,86 @@ public class jGenNum {
         catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    public static int[] inputData(){
+        int rez[] = new int[]{0,0,0,0};//массив результатов
+        String temp = "";
+        Scanner scanner = new Scanner(System.in);
+        do {
+            /**
+             * Вводим начало интервала (с обработкой ошибок)
+             */
+            System.out.println("Введите начало интервала: ");
+            temp = scanner.nextLine();
+            try {
+                rez[0] = Integer.parseInt(temp);
+            }
+            catch (NumberFormatException e){
+                System.out.println("Невеный формат строки");
+            }
+            /**
+             * Вводим конец интервала (с обработкой ошибок)
+             */
+            System.out.println("Введите конец интервала: ");
+            temp = scanner.nextLine();
+            try {
+                rez[1] = Integer.parseInt(temp);
+            }
+            catch (NumberFormatException e){
+                System.out.println("Неверный формат строки");
+            }
+            if (rez[0]>=rez[1]){
+                System.out.println("Начало интервала больше конца интервала. Повторите ввод.");
+            }
+        }
+        while (rez[0]>=rez[1]);
 
+        /**
+         * Теперь вводим сколько нам нужно примеров
+         */
+        System.out.println("Сколько Вам нужно примеров: ");
+        do{
+            try {
+                temp = scanner.nextLine();
+                rez[2]=Integer.parseInt(temp);
+            }
+            catch (NumberFormatException e){
+            }
+            if (rez[2]<=0){
+                System.out.println("Введены неверные данные\nСколько Вам нужно примеров: ");
+            }
+        }
+        while (rez[2]<=0);
+
+        /**
+         * Теперь будем вводить математическую операцию
+         */
+        System.out.println("ВВедите математическую операцию (+-*\\)");
+        do {
+            temp = scanner.nextLine();
+            switch (temp){
+                case "+":
+                    rez[3]=1;
+                    break;
+                case "-":
+                    rez[3]=2;
+                    break;
+                case "*":
+                    rez[3]=3;
+                    break;
+                case "/":
+                    rez[3]=4;
+                    break;
+                default:
+                    System.out.println("Неверный формат данных\nПовторите ввод...");
+            }
+        }
+        while (rez[3]==0);
+
+        System.out.println("Генерация примеров будет происходить в диапазоне от " +rez[0] + " до "+ rez[1] +
+                ". Примеров будет " + rez[2] +
+                ". Например: 1: 2" + temp + "2=");
+        return rez;
     }
 }
