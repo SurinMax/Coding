@@ -116,7 +116,7 @@ public class jGenNum {
         /**
          * Теперь будем вводить математическую операцию
          */
-        System.out.println("ВВедите математическую операцию (+-*\\)");
+        System.out.println("Введите математическую операцию (+-*\\)");
         do {
             temp = scanner.nextLine();
             switch (temp){
