@@ -20,9 +20,29 @@ public class jGenNum {
      * Функция проверят два числа
      * @param a первое число
      * @param b второе число
+     * @param oper код матетатической операции
      * @return если меньше нуля - false(нельзя использовать), true - в противном случае
      */
-    public static boolean checkMath(int a, int b, String oper){
+    public static boolean checkMath(int a, int b, int oper){
+        switch (oper){
+            case 2: {
+                if ((a - b) < 0) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            case 1:
+            {
+                if((a+b)>100){
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
@@ -122,5 +142,16 @@ public class jGenNum {
                 ". Примеров будет " + rez[2] +
                 ". Например: 1: 2" + temp + "2=");
         return rez;
+    }
+
+    /**
+     * Функция формирует строку на запись в файл
+     * @param a первое число
+     * @param b второе число
+     * @param oper код математической операции
+     * @return готовая строка для записи в файл
+     */
+    public static String outputStr(int a, int b, int oper){
+        return "";
     }
 }
