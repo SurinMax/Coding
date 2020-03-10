@@ -103,11 +103,10 @@ public class jMathGenerator {
         jMathGenerator mathGeneratorAdd = new jMathGenerator(startRange, endRange,"+");
         jMathGenerator mathGeneratorSub = new jMathGenerator(startRange,endRange,"-");
         if(!mathGeneratorAdd.checkRange()){
-            System.out.println("Неверные начальные условия");
+            System.out.println("Error initialization");
             System.exit(0);
         }
-        Date date = new Date();
-        mathGeneratorAdd.WriteToFile(pathToFile,date.toString()+"\n");
+        mathGeneratorAdd.WriteToFile(pathToFile,new Date().toString()+"\n");
         for (int i=1;i<=countMatch;i++){
             mathGeneratorAdd.genFirstNumber();
             mathGeneratorAdd.genSecondNumber();
