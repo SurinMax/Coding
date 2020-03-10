@@ -26,16 +26,18 @@ public class jMathGenerator {
      * Генерирует первое число для примера
      */
     public void genFirstNumber(){
-        Random random = new Random();
-        firstNumber = random.nextInt((endRange - startRange) + 1) + startRange;
+        //Random random = new Random();
+        firstNumber = new Random().nextInt((endRange - startRange) + 1) + startRange;
+        //firstNumber = random.nextInt((endRange - startRange) + 1) + startRange;
     }
 
     /**
      * Генерирует второе число для примера
      */
     public void genSecondNumber(){
-        Random random = new Random();
-        secondNumber = random.nextInt((endRange - startRange) + 1) + startRange;
+        //Random random = new Random();
+        secondNumber = new Random().nextInt((endRange - startRange) + 1) + startRange;
+        //secondNumber = random.nextInt((endRange - startRange) + 1) + startRange;
     }
 
     /**
