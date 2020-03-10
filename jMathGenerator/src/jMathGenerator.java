@@ -1,7 +1,5 @@
-import javax.xml.crypto.Data;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Random;
 
@@ -99,9 +97,11 @@ public class jMathGenerator {
     public static void main(String[] args) {
         String pathToFile = "E:\\test.txt";
         int countMatch = 10;
+        int startRange = 10;
+        int endRange = 50;
         System.out.println("Match Generator Start");
-        jMathGenerator mathGeneratorAdd = new jMathGenerator(10, 50,"+");
-        jMathGenerator mathGeneratorSub = new jMathGenerator(10,50,"-");
+        jMathGenerator mathGeneratorAdd = new jMathGenerator(startRange, endRange,"+");
+        jMathGenerator mathGeneratorSub = new jMathGenerator(startRange,endRange,"-");
         if(!mathGeneratorAdd.checkRange()){
             System.out.println("Неверные начальные условия");
             System.exit(0);
