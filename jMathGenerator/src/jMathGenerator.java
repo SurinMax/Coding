@@ -26,18 +26,14 @@ public class jMathGenerator {
      * Генерирует первое число для примера
      */
     public void genFirstNumber(){
-        //Random random = new Random();
         firstNumber = new Random().nextInt((endRange - startRange) + 1) + startRange;
-        //firstNumber = random.nextInt((endRange - startRange) + 1) + startRange;
     }
 
     /**
      * Генерирует второе число для примера
      */
     public void genSecondNumber(){
-        //Random random = new Random();
         secondNumber = new Random().nextInt((endRange - startRange) + 1) + startRange;
-        //secondNumber = random.nextInt((endRange - startRange) + 1) + startRange;
     }
 
     /**
@@ -100,7 +96,7 @@ public class jMathGenerator {
         String pathToFile = "E:\\test.txt"; //куда будем записывать примеры
         int countMatch = 10; //сколько примеров нужно
         int startRange = 10; //начальное число для генерации
-        int endRange = 50; //конечное число для генерации
+        int endRange = 90; //конечное число для генерации
         System.out.println("Match Generator Start");
         jMathGenerator mathGeneratorAdd = new jMathGenerator(startRange, endRange,"+");
         jMathGenerator mathGeneratorSub = new jMathGenerator(startRange,endRange,"-");
@@ -130,4 +126,3 @@ public class jMathGenerator {
     }
 
 }
-
