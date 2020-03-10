@@ -6,15 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b20c4f3f-ac52-4e51-8cdc-ca7378e07acd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../jMathGenerator/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jMathGenerator/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jMathGenerator/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jMathGenerator/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jMathGenerator/jMathGenerator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jMathGenerator/src/jMathGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b20c4f3f-ac52-4e51-8cdc-ca7378e07acd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

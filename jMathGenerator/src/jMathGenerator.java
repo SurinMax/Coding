@@ -95,10 +95,10 @@ public class jMathGenerator {
     }
 
     public static void main(String[] args) {
-        String pathToFile = "E:\\test.txt";
-        int countMatch = 10;
-        int startRange = 10;
-        int endRange = 50;
+        String pathToFile = "E:\\test.txt"; //куда будем записывать примеры
+        int countMatch = 10; //сколько примеров нужно
+        int startRange = 10; //начальное число для генерации
+        int endRange = 50; //конечное число для генерации
         System.out.println("Match Generator Start");
         jMathGenerator mathGeneratorAdd = new jMathGenerator(startRange, endRange,"+");
         jMathGenerator mathGeneratorSub = new jMathGenerator(startRange,endRange,"-");
@@ -125,6 +125,7 @@ public class jMathGenerator {
                     mathGeneratorSub.getMatchOperation()+
                     mathGeneratorSub.getSecondNumber()+"=\n");
         }
+        System.out.println("Match Generator End");
     }
 
 }
