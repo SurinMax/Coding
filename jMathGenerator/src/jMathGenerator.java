@@ -93,8 +93,13 @@ public class jMathGenerator {
     }
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         String pathToFile = "E:\\test.txt"; //куда будем записывать примеры
         int countMatch = 50; //сколько примеров нужно
+=======
+        String pathToFile = "E:\\Максим\\test.txt"; //куда будем записывать примеры
+        int countMatch = 10; //сколько примеров нужно
+>>>>>>> 6b45b6c71c6560b0c8153a1bcb44e71e58a5cb0e
         int startRange = 10; //начальное число для генерации
         int endRange = 90; //конечное число для генерации
         System.out.println("Match Generator Start");
