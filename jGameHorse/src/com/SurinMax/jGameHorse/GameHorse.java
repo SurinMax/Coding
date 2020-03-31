@@ -665,7 +665,7 @@ public class GameHorse extends JFrame {
             				
             			case "cb54":
             				if(!(cb.getName().equals("cb33") 
-            						|| cb.getName().equals("cb33")
+            						|| cb.getName().equals("cb35")
             						|| cb.getName().equals("cb42"))){
                 				JOptionPane.showMessageDialog(null, messageStepError);
                 				cb.setSelected(false);
