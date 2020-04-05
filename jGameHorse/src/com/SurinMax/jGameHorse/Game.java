@@ -78,10 +78,6 @@ public class Game extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				gameHorse5.dellComponents();
-				gameHorse5= null;
-				jPanel.revalidate();
-				jPanel.repaint();
-				jPanel= null;
 				
 			}
 		});
