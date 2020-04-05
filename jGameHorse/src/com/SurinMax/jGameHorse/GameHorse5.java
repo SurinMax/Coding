@@ -53,6 +53,8 @@ public class GameHorse5 extends JFrame {
 	private JCheckBox cb53;
 	private JCheckBox cb54;
 	private JCheckBox cb55;
+	private JPanel jpanel;
+	private JButton btAgain;
 	
 	public int getCountStep() {
 		return countStep;
@@ -72,7 +74,7 @@ public class GameHorse5 extends JFrame {
 	public JPanel windowBuilder(){
 //		JFrame jframe = new JFrame();
 //		jframe = new JFrame();
-		JPanel jpanel = new JPanel();
+		jpanel = new JPanel();
 //		jframe.add(jpanel);
 //		setSize(300,200);
         //setTitle("GameHorse");
@@ -262,7 +264,7 @@ public class GameHorse5 extends JFrame {
         		,new Insets(0, 0, 0, 0),
         		0,0));
         
-        JButton btAgain = new JButton("Again");
+        btAgain = new JButton("Again");
         jpanel.add(btAgain, new GridBagConstraints(0,6,5,1,0,0, 
         		GridBagConstraints.CENTER
         		,GridBagConstraints.NONE
@@ -711,6 +713,37 @@ public class GameHorse5 extends JFrame {
 //        getContentPane().add(jpanel);
         return jpanel;
 	} 
+	
+	public void dellComponents() {
+		jpanel.remove(cb11);
+		jpanel.remove(cb12);
+		jpanel.remove(cb13);
+		jpanel.remove(cb14);
+		jpanel.remove(cb15);
+		jpanel.remove(cb21);
+		jpanel.remove(cb22);
+		jpanel.remove(cb23);
+		jpanel.remove(cb24);
+		jpanel.remove(cb25);
+		jpanel.remove(cb31);
+		jpanel.remove(cb32);
+		jpanel.remove(cb33);
+		jpanel.remove(cb34);
+		jpanel.remove(cb35);
+		jpanel.remove(cb41);
+		jpanel.remove(cb42);
+		jpanel.remove(cb43);
+		jpanel.remove(cb44);
+		jpanel.remove(cb45);
+		jpanel.remove(cb51);
+		jpanel.remove(cb52);
+		jpanel.remove(cb53);
+		jpanel.remove(cb54);
+		jpanel.remove(cb55);
+		jpanel.remove(btAgain);
+		
+		
+	}
 //	public static void main(String[] args) {
 //		GameHorse5 gameHorse = new GameHorse5();
 //		gameHorse.windowBuilder();
