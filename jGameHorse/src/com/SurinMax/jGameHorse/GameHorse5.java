@@ -13,7 +13,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
-public class GameHorse extends JFrame {
+public class GameHorse5 extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String lastCB = null;
 	private String messageStepError = "Step not correctly";
 	private String messageVictory = "You win";
@@ -65,12 +69,13 @@ public class GameHorse extends JFrame {
 		this.lastCB = string;
 	}
 	
-	public void windowBuilder(){
-		JFrame jframe = new JFrame();
+	public JPanel windowBuilder(){
+//		JFrame jframe = new JFrame();
+//		jframe = new JFrame();
 		JPanel jpanel = new JPanel();
-		jframe.add(jpanel);
-		setSize(300,200);
-        setTitle("GameHorse");
+//		jframe.add(jpanel);
+//		setSize(300,200);
+        //setTitle("GameHorse");
         
         GridBagLayout gbl = new GridBagLayout();
         jpanel.setLayout(gbl);
@@ -342,12 +347,9 @@ public class GameHorse extends JFrame {
         			case "cb11":
         				if(!(cb.getName().equals("cb23") 
         						|| cb.getName().equals("cb32"))){
-            				JOptionPane.showMessageDialog(null, messageStepError);
-            				cb.setSelected(false);
+            				errorStep();
         				}else {
-            				cb.setEnabled(false);
-            				setCountStep();
-            				setLastCB(cb.getName());
+            				step();
         				}
         				break;
         				
@@ -355,12 +357,9 @@ public class GameHorse extends JFrame {
         				if(!(cb.getName().equals("cb31") 
         						|| cb.getName().equals("cb33")
         						|| cb.getName().equals("cb24"))){
-            				JOptionPane.showMessageDialog(null, messageStepError);
-            				cb.setSelected(false);
+            				errorStep();
         				}else {
-            				cb.setEnabled(false);
-            				setCountStep();
-            				setLastCB(cb.getName());
+            				step();
         				}
         				break;
         					
@@ -369,12 +368,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb32")
             						|| cb.getName().equals("cb34")
             						|| cb.getName().equals("cb25"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -382,24 +378,18 @@ public class GameHorse extends JFrame {
             				if(!(cb.getName().equals("cb33") 
             						|| cb.getName().equals("cb35")
             						|| cb.getName().equals("cb22"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
             			case "cb15":
             				if(!(cb.getName().equals("cb23") 
             						|| cb.getName().equals("cb34"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -407,12 +397,9 @@ public class GameHorse extends JFrame {
             				if(!(cb.getName().equals("cb13") 
             						|| cb.getName().equals("cb33")
             						|| cb.getName().equals("cb42"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -421,12 +408,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb43")
             						|| cb.getName().equals("cb14")
             						|| cb.getName().equals("cb34"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -437,12 +421,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb35")
             						|| cb.getName().equals("cb42")
             						|| cb.getName().equals("cb44"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -451,12 +432,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb32")
             						|| cb.getName().equals("cb43")
             						|| cb.getName().equals("cb45"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -464,12 +442,9 @@ public class GameHorse extends JFrame {
             				if(!(cb.getName().equals("cb13") 
             						|| cb.getName().equals("cb33")
             						|| cb.getName().equals("cb44"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -478,12 +453,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb52")
             						|| cb.getName().equals("cb23")
             						|| cb.getName().equals("cb43"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -494,12 +466,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb41")
             						|| cb.getName().equals("cb53")
             						|| cb.getName().equals("cb51"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -512,12 +481,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb45")
             						|| cb.getName().equals("cb54")
             						|| cb.getName().equals("cb52"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;	
             				
@@ -528,12 +494,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb42")
             						|| cb.getName().equals("cb53")
             						|| cb.getName().equals("cb55"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -542,12 +505,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb23")
             						|| cb.getName().equals("cb43")
             						|| cb.getName().equals("cb54"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -555,12 +515,9 @@ public class GameHorse extends JFrame {
             				if(!(cb.getName().equals("cb22") 
             						|| cb.getName().equals("cb33")
             						|| cb.getName().equals("cb53"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -570,12 +527,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb34")
             						|| cb.getName().equals("cb54"))){
             					
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -587,12 +541,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb51")
             						|| cb.getName().equals("cb55"))){
             					
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -602,12 +553,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb32")
             						|| cb.getName().equals("cb52"))){
             					
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -615,24 +563,18 @@ public class GameHorse extends JFrame {
             				if(!(cb.getName().equals("cb24") 
             						|| cb.getName().equals("cb33")
             						|| cb.getName().equals("cb53"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
             			case "cb51":
             				if(!(cb.getName().equals("cb32") 
             						|| cb.getName().equals("cb43"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -640,12 +582,9 @@ public class GameHorse extends JFrame {
             				if(!(cb.getName().equals("cb31") 
             						|| cb.getName().equals("cb33")
             						|| cb.getName().equals("cb44"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -654,12 +593,9 @@ public class GameHorse extends JFrame {
             						|| cb.getName().equals("cb34")
             						|| cb.getName().equals("cb41")
             						|| cb.getName().equals("cb45"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
@@ -667,30 +603,23 @@ public class GameHorse extends JFrame {
             				if(!(cb.getName().equals("cb33") 
             						|| cb.getName().equals("cb35")
             						|| cb.getName().equals("cb42"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
             				
             			case "cb55":
             				if(!(cb.getName().equals("cb34") 
             						|| cb.getName().equals("cb43"))){
-                				JOptionPane.showMessageDialog(null, messageStepError);
-                				cb.setSelected(false);
+                				errorStep();
             				}else {
-                				cb.setEnabled(false);
-                				setCountStep();
-                				setLastCB(cb.getName());
+                				step();
             				}
             				break;
 
             			default:
-            				JOptionPane.showMessageDialog(null, messageStepError);
-            				cb.setSelected(false);
+						errorStep();
             				break;
         			}
         		}
@@ -698,6 +627,21 @@ public class GameHorse extends JFrame {
         			JOptionPane.showMessageDialog(null, messageVictory);
         		}
         	}
+        	/**
+        	 * Метод для ошибочного шага
+        	 */
+			private void errorStep() {
+				JOptionPane.showMessageDialog(null, messageStepError);
+				cb.setSelected(false);
+			}
+        	/**
+        	 * Функция отмечает текущий checkbox не используемым, увеличивает шаг на 1
+        	 */
+			private void step() {
+				cb.setEnabled(false);
+				setCountStep();
+				setLastCB(cb.getName());
+			}
         }
         
         actionAgain btAgainAction = new actionAgain();
@@ -762,15 +706,15 @@ public class GameHorse extends JFrame {
         cb54.addActionListener(cbAction54);
         cb55.addActionListener(cbAction55);
         
-        setVisible(true);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        getContentPane().add(jpanel);
-		
-	}
-	public static void main(String[] args) {
-		GameHorse gameHorse = new GameHorse();
-		gameHorse.windowBuilder();
-
-	}
+//        setVisible(true);
+//        setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        getContentPane().add(jpanel);
+        return jpanel;
+	} 
+//	public static void main(String[] args) {
+//		GameHorse5 gameHorse = new GameHorse5();
+//		gameHorse.windowBuilder();
+//
+//	}
 
 }
