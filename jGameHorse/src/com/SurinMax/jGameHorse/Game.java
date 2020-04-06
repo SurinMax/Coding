@@ -24,11 +24,13 @@ public class Game extends JFrame{
 	private JMenuItem jMenuItemExit;
 	private JMenuItem jMenuItemExitProgram;
 	GameHorse5 gameHorse5;
+	private boolean startGame = false;
 	
 	public Game() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		jFrame = new JFrame();
 		jPanel = new JPanel();
+		jFrame.add(jPanel);
 		jMenuBar = new JMenuBar();
 		jMenuBar.add(createMenuGame());
 		jMenuBar.add(createMenuExit());
@@ -45,12 +47,14 @@ public class Game extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				gameHorse5 = new GameHorse5();
-				jPanel = gameHorse5.windowBuilder();
-				jFrame.add(jPanel);
-				getContentPane().add(jPanel);
-				jPanel.revalidate();
-				jPanel.repaint();
+				if(!startGame) {
+					gameHorse5 = new GameHorse5();
+					jPanel = gameHorse5.windowBuilder(jPanel);
+					getContentPane().add(jPanel);
+					jPanel.revalidate();
+					jPanel.repaint();
+					startGame = true;					
+				}
 				
 				
 			}
@@ -77,7 +81,13 @@ public class Game extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				gameHorse5.dellComponents();
+				if(startGame) {
+					gameHorse5.dellComponents(jPanel);
+					gameHorse5 = null;
+					jPanel.revalidate();
+					jPanel.repaint();
+					startGame = false;
+				}
 				
 			}
 		});

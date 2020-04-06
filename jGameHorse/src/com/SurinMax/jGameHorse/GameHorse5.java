@@ -53,7 +53,7 @@ public class GameHorse5 extends JFrame {
 	private JCheckBox cb53;
 	private JCheckBox cb54;
 	private JCheckBox cb55;
-	private JPanel jpanel;
+	
 	private JButton btAgain;
 	
 	public int getCountStep() {
@@ -71,13 +71,7 @@ public class GameHorse5 extends JFrame {
 		this.lastCB = string;
 	}
 	
-	public JPanel windowBuilder(){
-//		JFrame jframe = new JFrame();
-//		jframe = new JFrame();
-		jpanel = new JPanel();
-//		jframe.add(jpanel);
-//		setSize(300,200);
-        //setTitle("GameHorse");
+	public JPanel windowBuilder(JPanel jpanel){
         
         GridBagLayout gbl = new GridBagLayout();
         jpanel.setLayout(gbl);
@@ -331,6 +325,7 @@ public class GameHorse5 extends JFrame {
         		cb55.setSelected(false);
         		cb55.setEnabled(true);
         		setLastCB(null);
+        		countStep = 0;
         	}
         }
         class actionClick implements ActionListener{
@@ -630,14 +625,15 @@ public class GameHorse5 extends JFrame {
         		}
         	}
         	/**
-        	 * Метод для ошибочного шага
+        	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         	 */
 			private void errorStep() {
+				//JOptionPane.showMessageDialog(null, messageStepError);
 				JOptionPane.showMessageDialog(null, messageStepError);
 				cb.setSelected(false);
 			}
         	/**
-        	 * Функция отмечает текущий checkbox не используемым, увеличивает шаг на 1
+        	 * пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ checkbox пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ 1
         	 */
 			private void step() {
 				cb.setEnabled(false);
@@ -707,14 +703,11 @@ public class GameHorse5 extends JFrame {
         cb53.addActionListener(cbAction53);
         cb54.addActionListener(cbAction54);
         cb55.addActionListener(cbAction55);
-        
-//        setVisible(true);
-//        setDefaultCloseOperation(EXIT_ON_CLOSE);
-//        getContentPane().add(jpanel);
+
         return jpanel;
 	} 
 	
-	public void dellComponents() {
+	public void dellComponents(JPanel jpanel) {
 		jpanel.remove(cb11);
 		jpanel.remove(cb12);
 		jpanel.remove(cb13);
@@ -741,13 +734,7 @@ public class GameHorse5 extends JFrame {
 		jpanel.remove(cb54);
 		jpanel.remove(cb55);
 		jpanel.remove(btAgain);
-		
-		
+		jpanel.revalidate();
+		jpanel.repaint();
 	}
-//	public static void main(String[] args) {
-//		GameHorse5 gameHorse = new GameHorse5();
-//		gameHorse.windowBuilder();
-//
-//	}
-
 }
