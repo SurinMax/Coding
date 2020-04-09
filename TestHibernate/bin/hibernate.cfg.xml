@@ -22,7 +22,8 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
   
 	<!-- Annotated entity classes -->
-	<mapping resource = "TestHibernate.hbm.xml"></mapping>
+	<!--<mapping resource = "TestHibernate.hbm.xml"></mapping>-->
+	<mapping class = "com.surin.hibernate.TestHibernate"></mapping>
          
     </session-factory>
 </hibernate-configuration>
