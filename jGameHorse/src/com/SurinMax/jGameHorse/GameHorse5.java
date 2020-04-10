@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -17,6 +18,7 @@ public class GameHorse5 extends JFrame {
 	/**
 	 * 
 	 */
+
 	private static final long serialVersionUID = 1L;
 	private String lastCB = null;
 	private String messageStepError = "Step not correctly";
@@ -56,17 +58,70 @@ public class GameHorse5 extends JFrame {
 	
 	private JButton btAgain;
 	
+	HashMap<String, String> correctStep = new HashMap<>();
+	
+	public GameHorse5() {
+		correctStep.put("cb11", "cb23,cb32");
+		correctStep.put("cb12", "cb31,cb33,cb24");
+		correctStep.put("cb13", "cb21,cb32,cb34,cb25");
+		correctStep.put("cb14", "cb33,cb35,cb22");
+		correctStep.put("cb15", "cb23,cb34");
+		correctStep.put("cb21", "cb13,cb33,cb45");
+		correctStep.put("cb22", "cb41,cb43,cb14,cb34");
+		correctStep.put("cb23", "cb31,cb11,cb15,cb35,cb42,cb44");
+		correctStep.put("cb24", "cb12,cb32,cb43,cb45");
+		correctStep.put("cb25", "cb13,cb33,cb44");
+		correctStep.put("cb31", "cb12,cb52,cb23,cb43");
+		correctStep.put("cb32", "cb11,cb13,cb24,cb41,cb53,cb51");
+		correctStep.put("cb33", "cb51,cb41,cb12,cb14,cb25,cb45,cb54,cb52");
+		correctStep.put("cb34", "cb13,cb15,cb22,cb42,cb53,cb55");
+		correctStep.put("cb35", "cb14,cb23,cb43,cb54");
+		correctStep.put("cb41", "cb22,cb33,cb53");
+		correctStep.put("cb42", "cb21,cb23,cb34,cb54");
+		correctStep.put("cb43", "cb22,cb24,cb31,cb35,cb51,cb55");
+		correctStep.put("cb44", "cb23,cb25,cb32,cb52");
+		correctStep.put("cb45", "cb24,cb33,cb53");
+		correctStep.put("cb51", "cb32,cb43");
+		correctStep.put("cb52", "cb31,cb33,cb44");
+		correctStep.put("cb53", "cb32,cb34,cb41,cb45");
+		correctStep.put("cb54", "cb33,cb35,cb42");
+		correctStep.put("cb55", "cb34,cb43");
+	}
+	
+	public boolean isCorrentStep(String currentStep) {
+		String valueKey;
+		if(correctStep.containsKey(currentStep)) {
+			valueKey = correctStep.get(currentStep);
+			valueKey.contains(currentStep);
+		}
+		return false;
+	}
+	 /**
+	  * Function get current count step
+	  * @return count step
+	  */
 	public int getCountStep() {
 		return countStep;
 	}
+	
+	/**
+	 * Function do increment current step +1
+	 */
 	 public void setCountStep() {
 		 countStep++;
 	 }
-	
+	 
+	/**
+	 * Function return name last checkbox 
+	 * @return name checkbox
+	 */
 	public String getLastCB() {
 		return lastCB;
 	}
-	
+	/**
+	 * Function set name last checkbox 
+	 * @param string name checkbox
+	 */
 	public void setLastCB(String string) {
 		this.lastCB = string;
 	}
