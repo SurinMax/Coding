@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.swing.JButton;
@@ -24,7 +25,7 @@ public class GameHorse5 extends JFrame {
 	private String messageStepError = "Step not correctly";
 	private String messageVictory = "You win";
 	private int countStep = 0;
-	private final int stepToVictory = 25;
+	private final int countStepToVictory = 25;
 	
 	private JCheckBox cb11;
 	private JCheckBox cb12;
@@ -60,6 +61,8 @@ public class GameHorse5 extends JFrame {
 	
 	HashMap<String, String> correctStep = new HashMap<>();
 	
+	ArrayList<JCheckBox> listObjectCB = new ArrayList<>();
+	
 	public GameHorse5() {
 		correctStep.put("cb11", "cb23,cb32");
 		correctStep.put("cb12", "cb31,cb33,cb24");
@@ -88,11 +91,11 @@ public class GameHorse5 extends JFrame {
 		correctStep.put("cb55", "cb34,cb43");
 	}
 	
-	public boolean isCorrentStep(String currentStep) {
+	public boolean isCorrentStep(String lastCB, String CB) {
 		String valueKey;
-		if(correctStep.containsKey(currentStep)) {
-			valueKey = correctStep.get(currentStep);
-			valueKey.contains(currentStep);
+		if(correctStep.containsKey(lastCB)) {
+			valueKey = correctStep.get(lastCB);
+			return valueKey.contains(CB);
 		}
 		return false;
 	}
@@ -320,65 +323,41 @@ public class GameHorse5 extends JFrame {
         		,new Insets(0, 0, 0, 0),
         		0,0));
         
+		listObjectCB.add(cb11);
+		listObjectCB.add(cb12);
+		listObjectCB.add(cb13);
+		listObjectCB.add(cb14);
+		listObjectCB.add(cb15);
+		listObjectCB.add(cb21);
+		listObjectCB.add(cb22);
+		listObjectCB.add(cb23);
+		listObjectCB.add(cb24);
+		listObjectCB.add(cb25);
+		listObjectCB.add(cb31);
+		listObjectCB.add(cb32);
+		listObjectCB.add(cb33);
+		listObjectCB.add(cb34);
+		listObjectCB.add(cb35);
+		listObjectCB.add(cb41);
+		listObjectCB.add(cb42);
+		listObjectCB.add(cb43);
+		listObjectCB.add(cb44);
+		listObjectCB.add(cb45);
+		listObjectCB.add(cb51);
+		listObjectCB.add(cb52);
+		listObjectCB.add(cb53);
+		listObjectCB.add(cb54);
+		listObjectCB.add(cb55);
+        
         
         class actionAgain implements ActionListener{
         	
         	@Override
         	public void actionPerformed(ActionEvent e) {
-        		cb11.setSelected(false);
-        		cb11.setEnabled(true);
-        		cb12.setSelected(false);
-        		cb12.setEnabled(true);
-        		cb13.setSelected(false);
-        		cb13.setEnabled(true);
-        		cb14.setSelected(false);
-        		cb14.setEnabled(true);
-        		cb15.setSelected(false);
-        		cb15.setEnabled(true);
-        		
-        		cb21.setSelected(false);
-        		cb21.setEnabled(true);
-        		cb22.setSelected(false);
-        		cb22.setEnabled(true);
-        		cb23.setSelected(false);
-        		cb23.setEnabled(true);
-        		cb24.setSelected(false);
-        		cb24.setEnabled(true);
-        		cb25.setSelected(false);
-        		cb25.setEnabled(true);
-        		
-        		cb31.setSelected(false);
-        		cb31.setEnabled(true);
-        		cb32.setSelected(false);
-        		cb32.setEnabled(true);
-        		cb33.setSelected(false);
-        		cb33.setEnabled(true);
-        		cb34.setSelected(false);
-        		cb34.setEnabled(true);
-        		cb35.setSelected(false);
-        		cb35.setEnabled(true);
-        		
-        		cb41.setSelected(false);
-        		cb41.setEnabled(true);
-        		cb42.setSelected(false);
-        		cb42.setEnabled(true);
-        		cb43.setSelected(false);
-        		cb43.setEnabled(true);
-        		cb44.setSelected(false);
-        		cb44.setEnabled(true);
-        		cb45.setSelected(false);
-        		cb45.setEnabled(true);
-        		
-        		cb51.setSelected(false);
-        		cb51.setEnabled(true);
-        		cb52.setSelected(false);
-        		cb52.setEnabled(true);
-        		cb53.setSelected(false);
-        		cb53.setEnabled(true);
-        		cb54.setSelected(false);
-        		cb54.setEnabled(true);
-        		cb55.setSelected(false);
-        		cb55.setEnabled(true);
+        		for (JCheckBox jCheckBox : listObjectCB) {
+        			jCheckBox.setSelected(false);
+        			jCheckBox.setEnabled(true);
+        		}
         		setLastCB(null);
         		countStep = 0;
         	}
@@ -395,287 +374,13 @@ public class GameHorse5 extends JFrame {
         			setCountStep();
         			cb.setEnabled(false);
         		}else {
-        			switch (getLastCB()) {
-        			case "cb11":
-        				if(!(cb.getName().equals("cb23") 
-        						|| cb.getName().equals("cb32"))){
-            				errorStep();
-        				}else {
-            				step();
-        				}
-        				break;
-        				
-        			case "cb12":
-        				if(!(cb.getName().equals("cb31") 
-        						|| cb.getName().equals("cb33")
-        						|| cb.getName().equals("cb24"))){
-            				errorStep();
-        				}else {
-            				step();
-        				}
-        				break;
-        					
-            			case "cb13":
-            				if(!(cb.getName().equals("cb21") 
-            						|| cb.getName().equals("cb32")
-            						|| cb.getName().equals("cb34")
-            						|| cb.getName().equals("cb25"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb14":
-            				if(!(cb.getName().equals("cb33") 
-            						|| cb.getName().equals("cb35")
-            						|| cb.getName().equals("cb22"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb15":
-            				if(!(cb.getName().equals("cb23") 
-            						|| cb.getName().equals("cb34"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb21":
-            				if(!(cb.getName().equals("cb13") 
-            						|| cb.getName().equals("cb33")
-            						|| cb.getName().equals("cb42"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb22":
-            				if(!(cb.getName().equals("cb41") 
-            						|| cb.getName().equals("cb43")
-            						|| cb.getName().equals("cb14")
-            						|| cb.getName().equals("cb34"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb23":
-            				if(!(cb.getName().equals("cb31") 
-            						|| cb.getName().equals("cb11")
-            						|| cb.getName().equals("cb15")
-            						|| cb.getName().equals("cb35")
-            						|| cb.getName().equals("cb42")
-            						|| cb.getName().equals("cb44"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb24":
-            				if(!(cb.getName().equals("cb12") 
-            						|| cb.getName().equals("cb32")
-            						|| cb.getName().equals("cb43")
-            						|| cb.getName().equals("cb45"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb25":
-            				if(!(cb.getName().equals("cb13") 
-            						|| cb.getName().equals("cb33")
-            						|| cb.getName().equals("cb44"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb31":
-            				if(!(cb.getName().equals("cb12") 
-            						|| cb.getName().equals("cb52")
-            						|| cb.getName().equals("cb23")
-            						|| cb.getName().equals("cb43"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb32":
-            				if(!(cb.getName().equals("cb11") 
-            						|| cb.getName().equals("cb13")
-            						|| cb.getName().equals("cb24")
-            						|| cb.getName().equals("cb41")
-            						|| cb.getName().equals("cb53")
-            						|| cb.getName().equals("cb51"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb33":
-            				if(!(cb.getName().equals("cb21") 
-            						|| cb.getName().equals("cb41")
-            						|| cb.getName().equals("cb12")
-            						|| cb.getName().equals("cb14")
-            						|| cb.getName().equals("cb25")
-            						|| cb.getName().equals("cb45")
-            						|| cb.getName().equals("cb54")
-            						|| cb.getName().equals("cb52"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;	
-            				
-            			case "cb34":
-            				if(!(cb.getName().equals("cb13") 
-            						|| cb.getName().equals("cb15")
-            						|| cb.getName().equals("cb22")
-            						|| cb.getName().equals("cb42")
-            						|| cb.getName().equals("cb53")
-            						|| cb.getName().equals("cb55"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb35":
-            				if(!(cb.getName().equals("cb14") 
-            						|| cb.getName().equals("cb23")
-            						|| cb.getName().equals("cb43")
-            						|| cb.getName().equals("cb54"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb41":
-            				if(!(cb.getName().equals("cb22") 
-            						|| cb.getName().equals("cb33")
-            						|| cb.getName().equals("cb53"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb42":
-            				if(!(cb.getName().equals("cb21") 
-            						|| cb.getName().equals("cb23")
-            						|| cb.getName().equals("cb34")
-            						|| cb.getName().equals("cb54"))){
-            					
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb43":
-            				if(!(cb.getName().equals("cb22") 
-            						|| cb.getName().equals("cb24")
-            						|| cb.getName().equals("cb31")
-            						|| cb.getName().equals("cb35")
-            						|| cb.getName().equals("cb51")
-            						|| cb.getName().equals("cb55"))){
-            					
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb44":
-            				if(!(cb.getName().equals("cb23") 
-            						|| cb.getName().equals("cb25")
-            						|| cb.getName().equals("cb32")
-            						|| cb.getName().equals("cb52"))){
-            					
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb45":
-            				if(!(cb.getName().equals("cb24") 
-            						|| cb.getName().equals("cb33")
-            						|| cb.getName().equals("cb53"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb51":
-            				if(!(cb.getName().equals("cb32") 
-            						|| cb.getName().equals("cb43"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb52":
-            				if(!(cb.getName().equals("cb31") 
-            						|| cb.getName().equals("cb33")
-            						|| cb.getName().equals("cb44"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb53":
-            				if(!(cb.getName().equals("cb32") 
-            						|| cb.getName().equals("cb34")
-            						|| cb.getName().equals("cb41")
-            						|| cb.getName().equals("cb45"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb54":
-            				if(!(cb.getName().equals("cb33") 
-            						|| cb.getName().equals("cb35")
-            						|| cb.getName().equals("cb42"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-            				
-            			case "cb55":
-            				if(!(cb.getName().equals("cb34") 
-            						|| cb.getName().equals("cb43"))){
-                				errorStep();
-            				}else {
-                				step();
-            				}
-            				break;
-
-            			default:
-						errorStep();
-            				break;
-        			}
+    				if(isCorrentStep(getLastCB(),cb.getName())){
+    					step();
+    				}else {
+    					errorStep();
+    				}
         		}
-        		if(countStep == stepToVictory) {
+        		if(countStep == countStepToVictory) {
         			JOptionPane.showMessageDialog(null, messageVictory);
         		}
         	}
@@ -763,31 +468,9 @@ public class GameHorse5 extends JFrame {
 	} 
 	
 	public void dellComponents(JPanel jpanel) {
-		jpanel.remove(cb11);
-		jpanel.remove(cb12);
-		jpanel.remove(cb13);
-		jpanel.remove(cb14);
-		jpanel.remove(cb15);
-		jpanel.remove(cb21);
-		jpanel.remove(cb22);
-		jpanel.remove(cb23);
-		jpanel.remove(cb24);
-		jpanel.remove(cb25);
-		jpanel.remove(cb31);
-		jpanel.remove(cb32);
-		jpanel.remove(cb33);
-		jpanel.remove(cb34);
-		jpanel.remove(cb35);
-		jpanel.remove(cb41);
-		jpanel.remove(cb42);
-		jpanel.remove(cb43);
-		jpanel.remove(cb44);
-		jpanel.remove(cb45);
-		jpanel.remove(cb51);
-		jpanel.remove(cb52);
-		jpanel.remove(cb53);
-		jpanel.remove(cb54);
-		jpanel.remove(cb55);
+		for (JCheckBox jCheckBox : listObjectCB) {
+			jpanel.remove(jCheckBox);
+		}
 		jpanel.remove(btAgain);
 		jpanel.revalidate();
 		jpanel.repaint();
