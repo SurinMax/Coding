@@ -3,29 +3,14 @@ package com.SurinMax.jGameHorse;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
-public class GameHorse5 extends JFrame {
-	/**
-	 * 
-	 */
-
-	private static final long serialVersionUID = 1L;
-	private String lastCB = null;
-	private String messageStepError = "Step not correctly";
-	private String messageVictory = "You win";
-	private int countStep = 0;
-	private final int countStepToVictory = 25;
+//public class GameHorse5 extends JFrame {
+public class GameHorse5 extends GameHorse{
 	
 	private JCheckBox cb11;
 	private JCheckBox cb12;
@@ -59,11 +44,8 @@ public class GameHorse5 extends JFrame {
 	
 	private JButton btAgain;
 	
-	HashMap<String, String> correctStep = new HashMap<>();
-	
-	ArrayList<JCheckBox> listObjectCB = new ArrayList<>();
-	
 	public GameHorse5() {
+		setCountStepToVictory(25);
 		correctStep.put("cb11", "cb23,cb32");
 		correctStep.put("cb12", "cb31,cb33,cb24");
 		correctStep.put("cb13", "cb21,cb32,cb34,cb25");
@@ -75,7 +57,7 @@ public class GameHorse5 extends JFrame {
 		correctStep.put("cb24", "cb12,cb32,cb43,cb45");
 		correctStep.put("cb25", "cb13,cb33,cb44");
 		correctStep.put("cb31", "cb12,cb52,cb23,cb43");
-		correctStep.put("cb32", "cb11,cb13,cb24,cb41,cb53,cb51");
+		correctStep.put("cb32", "cb11,cb13,cb24,cb41,cb53,cb51,cb44");
 		correctStep.put("cb33", "cb51,cb41,cb12,cb14,cb25,cb45,cb54,cb52");
 		correctStep.put("cb34", "cb13,cb15,cb22,cb42,cb53,cb55");
 		correctStep.put("cb35", "cb14,cb23,cb43,cb54");
@@ -89,44 +71,6 @@ public class GameHorse5 extends JFrame {
 		correctStep.put("cb53", "cb32,cb34,cb41,cb45");
 		correctStep.put("cb54", "cb33,cb35,cb42");
 		correctStep.put("cb55", "cb34,cb43");
-	}
-	
-	public boolean isCorrentStep(String lastCB, String CB) {
-		String valueKey;
-		if(correctStep.containsKey(lastCB)) {
-			valueKey = correctStep.get(lastCB);
-			return valueKey.contains(CB);
-		}
-		return false;
-	}
-	 /**
-	  * Function get current count step
-	  * @return count step
-	  */
-	public int getCountStep() {
-		return countStep;
-	}
-	
-	/**
-	 * Function do increment current step +1
-	 */
-	 public void setCountStep() {
-		 countStep++;
-	 }
-	 
-	/**
-	 * Function return name last checkbox 
-	 * @return name checkbox
-	 */
-	public String getLastCB() {
-		return lastCB;
-	}
-	/**
-	 * Function set name last checkbox 
-	 * @param string name checkbox
-	 */
-	public void setLastCB(String string) {
-		this.lastCB = string;
 	}
 	
 	public JPanel windowBuilder(JPanel jpanel){
@@ -348,59 +292,7 @@ public class GameHorse5 extends JFrame {
 		listObjectCB.add(cb53);
 		listObjectCB.add(cb54);
 		listObjectCB.add(cb55);
-        
-        
-        class actionAgain implements ActionListener{
-        	
-        	@Override
-        	public void actionPerformed(ActionEvent e) {
-        		for (JCheckBox jCheckBox : listObjectCB) {
-        			jCheckBox.setSelected(false);
-        			jCheckBox.setEnabled(true);
-        		}
-        		setLastCB(null);
-        		countStep = 0;
-        	}
-        }
-        class actionClick implements ActionListener{
-        	JCheckBox cb;
-        	actionClick(JCheckBox cb){
-        		this.cb = cb;
-        	}
-        	@Override
-        	public void actionPerformed (ActionEvent e) {
-        		if(getLastCB() == null) {
-        			setLastCB(cb.getName());
-        			setCountStep();
-        			cb.setEnabled(false);
-        		}else {
-    				if(isCorrentStep(getLastCB(),cb.getName())){
-    					step();
-    				}else {
-    					errorStep();
-    				}
-        		}
-        		if(countStep == countStepToVictory) {
-        			JOptionPane.showMessageDialog(null, messageVictory);
-        		}
-        	}
-        	/**
-        	 * ����� ��� ���������� ����
-        	 */
-			private void errorStep() {
-				//JOptionPane.showMessageDialog(null, messageStepError);
-				JOptionPane.showMessageDialog(null, messageStepError);
-				cb.setSelected(false);
-			}
-        	/**
-        	 * ������� �������� ������� checkbox �� ������������, ����������� ��� �� 1
-        	 */
-			private void step() {
-				cb.setEnabled(false);
-				setCountStep();
-				setLastCB(cb.getName());
-			}
-        }
+		listObjectBT.add(btAgain);
         
         actionAgain btAgainAction = new actionAgain();
         btAgain.addActionListener(btAgainAction);
@@ -466,13 +358,4 @@ public class GameHorse5 extends JFrame {
 
         return jpanel;
 	} 
-	
-	public void dellComponents(JPanel jpanel) {
-		for (JCheckBox jCheckBox : listObjectCB) {
-			jpanel.remove(jCheckBox);
-		}
-		jpanel.remove(btAgain);
-		jpanel.revalidate();
-		jpanel.repaint();
-	}
 }

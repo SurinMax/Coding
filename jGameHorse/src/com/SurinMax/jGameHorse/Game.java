@@ -55,8 +55,6 @@ public class Game extends JFrame{
 					jPanel.repaint();
 					startGame = true;					
 				}
-				
-				
 			}
 		});
 		return jMenuGame;
