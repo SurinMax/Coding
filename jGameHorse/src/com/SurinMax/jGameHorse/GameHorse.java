@@ -61,12 +61,22 @@ public class GameHorse {
 	}
 	
 	public boolean isCorrentStep(String lastCB, String CB) {
-		String valueKey;
-		if(correctStep.containsKey(lastCB)) {
-			valueKey = correctStep.get(lastCB);
-			return valueKey.contains(CB);
+		int ilastCB = Integer.parseInt(lastCB.replace("cb", ""));
+		int iCB = Integer.parseInt(CB.replace("cb", ""));
+		int num1 = (ilastCB + 2) + 10;
+		int num2 = (ilastCB + 2) - 10;
+		int num3 = (ilastCB - 2) + 10;
+		int num4 = (ilastCB - 2) - 10;
+		int num5 = (ilastCB + 20) + 1;
+		int num6 = (ilastCB + 20) - 1;
+		int num7 = (ilastCB - 20) + 1;
+		int num8 = (ilastCB - 20) - 1;
+		if(iCB == num1 || iCB == num2 || iCB == num3 || iCB == num4 || iCB == num5 || iCB == num6 || iCB == num7 || iCB == num8) {
+			return true;
 		}
-		return false;
+		else {
+			return false;
+		}
 	}
 	
 	class actionAgain implements ActionListener{
