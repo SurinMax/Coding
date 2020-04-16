@@ -24,6 +24,7 @@ public class Game extends JFrame{
 	private JMenuItem jMenuItemExit;
 	private JMenuItem jMenuItemExitProgram;
 	GameHorse5 gameHorse5;
+	GameHorse8 gameHorse8;
 	private boolean startGame = false;
 	
 	public Game() {
@@ -57,6 +58,21 @@ public class Game extends JFrame{
 				}
 			}
 		});
+		
+		jMenuItem8.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(!startGame) {
+					gameHorse8 = new GameHorse8();
+					jPanel = gameHorse8.windowBuilder(jPanel);
+					getContentPane().add(jPanel);
+					jPanel.revalidate();
+					jPanel.repaint();
+					startGame = true;					
+				}
+			}
+		});
 		return jMenuGame;
 	}
 	
@@ -80,8 +96,14 @@ public class Game extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(startGame) {
-					gameHorse5.dellComponents(jPanel);
-					gameHorse5 = null;
+					if(gameHorse5 != null) {
+						gameHorse5.dellComponents(jPanel);
+						gameHorse5 = null;						
+					}
+					if(gameHorse8 != null) {
+						gameHorse8.dellComponents(jPanel);
+						gameHorse8 = null;	
+					}
 					jPanel.revalidate();
 					jPanel.repaint();
 					startGame = false;
