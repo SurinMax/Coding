@@ -35,7 +35,6 @@ class MyServer implements Runnable{
 		try {
 			Scanner scanner = new Scanner(socket.getInputStream());
 			PrintWriter writer = new PrintWriter(socket.getOutputStream(),true);
-			//PrintWriter writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), "866")), true);
 			Service service = new Service(writer);
 			writer.println("You connect to: " + InetAddress.getLocalHost());
 			while(true) {
@@ -51,11 +50,11 @@ class MyServer implements Runnable{
 				if(str.equals("list")) {
 					service.getService();
 				}
-				if(str.equals("stop")) {
-					
+				if(str.matches("^stop .*")) {
+					writer.println("Run stop service");
 				}
-				if(str.equals("run")) {
-					
+				if(str.matches("^run .*")){
+					writer.println("Run run service");
 				}
 			}
 		} catch (IOException e) {
