@@ -1,4 +1,4 @@
-package com.surin;
+package com.gezmo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,7 +25,6 @@ public class ControlService {
 class MyServer implements Runnable{
 	Socket socket;
 	ServerSocket serverSocket;
-	Boolean isActive = true;
 	
 	public MyServer(Socket socket, ServerSocket serverSocket) {
 		this.socket = socket;
@@ -36,12 +35,15 @@ class MyServer implements Runnable{
 		try {
 			Scanner scanner = new Scanner(socket.getInputStream());
 			PrintWriter writer = new PrintWriter(socket.getOutputStream(),true);
+			//PrintWriter writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), "866")), true);
 			Service service = new Service(writer);
 			writer.println("You connect to: " + InetAddress.getLocalHost());
-			while(isActive) {
-				String str = scanner.nextLine();
+			while(true) {
+				String str = "";
+				if(scanner.hasNext()) {
+					str = scanner.nextLine();
+				}
 				if(str.equals("exit")) {
-					isActive = false;
 					scanner.close();
 					socket.close();
 					break;
@@ -55,7 +57,6 @@ class MyServer implements Runnable{
 				if(str.equals("run")) {
 					
 				}
-				writer.println("You write: " + str);	
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
