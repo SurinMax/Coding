@@ -26,7 +26,6 @@ public class Service {
 		    		Matcher matcher = pattern.matcher(str);
 		    		str = matcher.replaceAll(" ");
 		    		str = str.trim();
-		    		System.out.println(str);
 		    		writer.println(str);
 		    	}
 		    }
@@ -43,5 +42,23 @@ public class Service {
 	
 	void runService() {
 		
+	}
+	
+	void getState(String nameService) {
+		try {
+			String regexp = "[\\s]{2,}";//pattern regexp
+			Pattern pattern = Pattern.compile(regexp);
+			Process process = Runtime.getRuntime().exec("sc query "+nameService);
+			Scanner reader = new Scanner(process.getInputStream());
+			while(reader.hasNextLine()) {
+				String str = new String(reader.nextLine());
+				Matcher matcher = pattern.matcher(str);
+	    		str = matcher.replaceAll(" ");
+	    		str = str.trim();
+	    		writer.println(str);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
