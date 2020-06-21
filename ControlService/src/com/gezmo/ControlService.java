@@ -42,9 +42,7 @@ class MyServer implements Runnable{
 				String str = "";
 				if(scanner.hasNext()) {
 					str = scanner.nextLine();
-					System.out.println("Str 3= "+ str);
 				}
-				System.out.println("Str 2= "+ str);
 				if(str.equals("exit")) {
 					scanner.close();
 					socket.close();

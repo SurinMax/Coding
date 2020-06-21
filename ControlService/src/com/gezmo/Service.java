@@ -27,10 +27,14 @@ public class Service {
 		    		str = matcher.replaceAll(" ");
 		    		str = str.trim();
 		    		writer.println(str);
+		    		Thread.sleep(2);
 		    	}
 		    }
 		    reader.close();
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
