@@ -43,6 +43,10 @@ class MyServer implements Runnable{
 				if(scanner.hasNext()) {
 					str = scanner.nextLine();
 				}
+				System.out.println("str= " + "\""+str+"\"");
+				
+				service.changeStr(str);
+
 				if(str.equals("exit")) {
 					scanner.close();
 					socket.close();
@@ -51,21 +55,21 @@ class MyServer implements Runnable{
 				if(str.equals("list")) {
 					service.getService();
 				}
-				if(str.matches("^stop .*")) {
-					writer.println("Run stop service");
+				
+				if(str.matches("^stop .*") || str.matches("^start .*")) {
+					String tempStr[] = str.split(" ");
+					service.chahgeStateService(tempStr[0], tempStr[1]);
 				}
-				if(str.matches("^run .*")){
-					writer.println("Run run service");
-				}
-				if(str.matches("^find .*")) {
+
+				if(str.matches("^status .*")) {
 					service.getState(str.replaceAll("find ", ""));
 				}
 				if(str.matches("^help")) {
 					writer.println("You can do next:");
 					writer.println("1. Get list service. Use command \"list\"");
 					writer.println("2. Stop service. Use command \"stop name_service\"");
-					writer.println("3. Run service. Use command \"run name_service\"");
-					writer.println("4. Get status service. Use command \"find name_service\"");
+					writer.println("3. Start service. Use command \"start name_service\"");
+					writer.println("4. Get status service. Use command \"status name_service\"");
 				}
 			}
 		} catch (IOException e) {
