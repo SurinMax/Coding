@@ -10,8 +10,10 @@
     <body>
     	<h1>${Header}</h1>
         <h1>Select type game</h1>
-        <form action="">
+        <form method = "GET" action = "/GameHorse2/redirectGame5x5">
         	<button type="submit">5x5</button>
+        </form>
+        <form method = "GET" action = "/GameHorse2/redirectGame8x8">
         	<button type="submit">8x8</button>
         </form>
     </body>

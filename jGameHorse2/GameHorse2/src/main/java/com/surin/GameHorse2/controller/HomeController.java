@@ -30,4 +30,26 @@ public class HomeController {
 		  model.addAttribute("Header","Welcome in GameHorse2");
 	      return "typeGame";
 	   }
+	   
+	   @RequestMapping(value = "/redirectGame5x5", method = RequestMethod.GET)
+	   public String redirect5x5() {
+		   return "redirect:game5x5";
+	   }
+	   
+	   @RequestMapping(value = "/game5x5", method = RequestMethod.GET)
+	   public String game5x5(Model model) {
+		  model.addAttribute("Header","Welcome in GameHorse2");
+	      return "game5x5";
+	   }
+	   
+	   @RequestMapping(value = "/redirectGame8x8", method = RequestMethod.GET)
+	   public String redirect8x8() {
+		   return "redirect:game8x8";
+	   }
+	   
+	   @RequestMapping(value = "/game8x8", method = RequestMethod.GET)
+	   public String game8x8(Model model) {
+		  model.addAttribute("Header","Welcome in GameHorse2");
+	      return "game8x8";
+	   }
 }
