@@ -1,0 +1,18 @@
+<
+word;слово
+important;важно
+unimportant;неважно
+order;порядок
+>
+lucky;везучий
+the same;так-же
+<
+far;далеко
+<
+own;владелец
+sure;уверенный
+kind;добрый
+
+rich;богатый
+>
+poor;бедный

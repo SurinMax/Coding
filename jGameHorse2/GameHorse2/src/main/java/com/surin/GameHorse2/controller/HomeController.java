@@ -2,15 +2,18 @@ package com.surin.GameHorse2.controller;
 
 import java.io.IOException;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.surin.GameHorse2.src.GameHorse2;
+
 @Controller
 public class HomeController {
-
+	GameHorse2 gameHorse2 = new GameHorse2();
 	@RequestMapping(value="/")
 	//public ModelAndView test(HttpServletResponse response) throws IOException{
 	//public ModelAndView GameHorse2Controller(HttpServletResponse response) throws IOException{
@@ -39,6 +42,7 @@ public class HomeController {
 	   @RequestMapping(value = "/game5x5", method = RequestMethod.GET)
 	   public String game5x5(Model model) {
 		  model.addAttribute("Header","Welcome in GameHorse2");
+		  model.addAttribute("num", gameHorse2.getNum());
 	      return "game5x5";
 	   }
 	   
@@ -52,4 +56,10 @@ public class HomeController {
 		  model.addAttribute("Header","Welcome in GameHorse2");
 	      return "game8x8";
 	   }
+	   
+	   @RequestMapping(value = "/incNum", method = RequestMethod.GET)
+	   public String  incNum() {
+		   gameHorse2.incNum();
+		   return "redirect:game5x5";
+	   }	   
 }
