@@ -6,14 +6,27 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
-public class ReadFile {
-	String patchToFile;
-	ArrayList<String> wordsToLearn;
-	boolean write = false;
-	public ReadFile(String patchToFile) {
+/**
+ * 
+ * @author surin
+ *
+ */
+public class Vocabulary {
+	/**
+	 * Path to file with vocabulary
+	 */
+	private String patchToFile;
+	private ArrayList<String> wordsToLearn;
+	private boolean write = false;
+	public Vocabulary(String patchToFile) {
 		this.patchToFile = patchToFile;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public ArrayList<String> startReadFile() {
 		wordsToLearn = new ArrayList<String>();
 		try {
@@ -42,9 +55,20 @@ public class ReadFile {
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found. Please, check file");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		return wordsToLearn;
 	}
+	
+	public String nextWord(ArrayList<String> wordsToLearn) {
+		return wordsToLearn.get(genNumberWord(wordsToLearn.size()));
+	}
+	
+	public int genNumberWord(int sizeArrayList){
+		int number = 0;
+		if(sizeArrayList != 0)
+			number = new Random().nextInt(((sizeArrayList-1) - 0) + 1) + 0;
+		return number;
+    }
+	
 }
