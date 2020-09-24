@@ -1,14 +1,127 @@
 <
-word;слово
-important;важно
-unimportant;неважно
-order;порядок
-lucky;везучий
-the same;так-же
+also;так-же
+always;всегда
+better;лучше
+brother;брат
+check;проверять
+come;приходить
+dress;платье
+early;рано
+everything;все
 far;далеко
-own;владелец
-sure;уверенный
+feel;чувствовать
+find;находить
+finish;закачивать
+flat;квартира
+friend;друг
+happen;случается
+happy;счастлив
+hard;тяжело
+here;здесь
+important;важно
+improve;улучшить
+in that;в том
+in this;в этом
 kind;добрый
-rich;богатый
+late;поздно
+learh;учиться
+look;выглядеть
+lucky;везучий
+miss;скучать
+mistake;ошибка
+my;мой
+noun;существительное
+offer;преложение
+often;часто
+on time;во время
+order;порядок
+own;владелец
+parents;родители
+place;место
 poor;бедный
+profit;прибыль
+really;реально
+relax;отдыхать
+remember;помнить
+rich;богатый
+say;сказать
+seem;кажется
+something;что-то
+sometimes;иногда
+success;успех
+support;поддрежка
+sure;уверенный
+teach;преподавать
+the same;так-же
+there;там
+these;эти
+thing;вещь
+this;этот
+those;те
+try;пытаться
+unimportant;неважно
+useful;полезный
+usually;обычно
+want;хотеть
+watch;смотреть
+word;слово
+your;твой
+without;без
+grammar;грамматика
+correctly;правильно
+correct;правильный
+fast;быстро
+right now;прямо сейчас
+fluently;свободно
+again;снова
+one more time;еще один раз
+abroad;заграница
+another;другое
+thank;спасибо
+go here;пойти сюда
+go there;пойти туда
+buy;купить
+cup;чашка
+would;бы
+i would like;я хотел бы
+tea;чай
+drink;пить
+visit;посетить
+become;стать
+agree;согласен
+with;с
+discuss;обсудить
+later;позже
+about;об
+interes;интересовать
+interest;интерес
+attract;привлекать
+future;будующее
+recommend;рекомендовать
+son;сын
+dauther;дочь
+change;изменить
+life;жизнь
+partner;партнер
+her;ее
+him;его
+my friend and i;я с моим другом
+call;звонок
+them;им
+believe;верить
+bring;приносить
+happiness;счастье
+hard;усердно
+harder;усерднее
+solve this problem;режить эту проблему
+rule;правило
+advice;совет
+less;меньше
+pay for her;платить за нее
+from time to time;вреия от времени
+go to;ходить куда-то
+so many;так много
+spanish;испанский
+order;порядок
+food;еда
 >

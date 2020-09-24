@@ -7,6 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
@@ -120,6 +122,7 @@ public class UI extends Application {
 				l_mode.setText("Selected Mode - False");
 				l_vocabulary.setText("Download vocabulary - False");
 				l_wordToTranslate.setText("Word to Translate");
+				wordsToLearn.clear();
 				correct = 0;
 				incorrect = 0;
 			}
@@ -162,10 +165,20 @@ public class UI extends Application {
 			@Override
 			public void handle(ActionEvent arg0) {
 				setWordsToLearn();
-				s_vocabulary.setDisable(false);
-				s_statistic.setDisable(false);
-				l_vocabulary.setText("Download vocabulary - TRUE");
-				m_Mode.setDisable(false);
+				if(wordsToLearn.size() != 0) {
+					s_vocabulary.setDisable(false);
+					s_statistic.setDisable(false);
+					l_vocabulary.setText("Download vocabulary - TRUE");
+					m_Mode.setDisable(false);
+				}
+				else {
+					Alert alert = new Alert(AlertType.ERROR);
+					alert.setTitle("Error");
+					alert.setHeaderText("Ooops, there was an error!");
+					alert.setContentText("Vocabulary is empty!");
+					alert.showAndWait();
+				}
+
 			}
 		});
 		
