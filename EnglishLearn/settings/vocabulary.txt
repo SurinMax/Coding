@@ -1,127 +1,212 @@
 <
+about;об
+abroad;заграница
+add;добавлять
+adjective;прилагательное
+advice;совет
+again;снова
+agree;согласен
 also;так-же
 always;всегда
+and;и
+another;другое
+answer;ответ
+article;заголовок
+as soon as possible;как можно скорее
+at all;во все
+attract;привлекать
+beautiful;красивый
+become;стать
+believe;верить
 better;лучше
+boyfriend;парень
+brilliat result;блестящий резальтат
+bring;приносить
 brother;брат
+but;но
+buy;купить
+call;звонок
+change;изменить
 check;проверять
 come;приходить
+complain;жаловаться
+correct;правильный
+correctly;правильно
+criricize;критиковать
+cup;чашка
+dauther;дочь
+decision;решение
+depend on;зависит от
+different;различные
+disagree;несоглашаться
+discuss;обсудить
 dress;платье
+drink;пить
 early;рано
+enough;достаточно
+esercise;упражнение
 everything;все
+exam;экзамен
+excellent;отлично
+explain;объяснять
 far;далеко
+fast;быстро
 feel;чувствовать
 find;находить
 finish;закачивать
 flat;квартира
+fluently;свободно
+food;еда
+for;для
+free time;свободное время
 friend;друг
+from time to time;вреия от времени
+future;будующее
+get to;добирать до
+get up;вставать
+girlfriend;девушка
+give;давать
+go here;пойти сюда
+go there;пойти туда
+go to bed;ложиться спать
+go to the gym;ходить в зал
+go to;ходить куда-то
+grammar;грамматика
 happen;случается
+happiness;счастье
 happy;счастлив
 hard;тяжело
+hard;усердно
+harder;усерднее
+hate;ненавидит
+have at home;иметь дома
+hear;слышать
+her;ее
 here;здесь
+him;его
+homework;домашняя работа
+housework;работа по дому
+how;как
+i would like;я хотел бы
+ignore;игнорировать
 important;важно
 improve;улучшить
 in that;в том
 in this;в этом
+inspire;вдохновлять
+interes;интересовать
+interest;интерес
 kind;добрый
+knowledge;знания
 late;поздно
-learh;учиться
+later;позже
+learn;учиться
+leave home;уйти из дома
+less;меньше
+let`s talk;давай поговорим
+life;жизнь
+listen to music;слушать музыку
+listen to the radio;слушать радио
+listen to;слушать что-то
+look for;искать
 look;выглядеть
 lucky;везучий
+memory;память
+mention;упоминать
 miss;скучать
 mistake;ошибка
+motivate;мотивировать
+movie;фильм
+much more;намного больше
+my friend and i;я с моим другом
 my;мой
+negative form;отрицательная форма
 noun;существительное
 offer;преложение
 often;часто
 on time;во время
+one more time;еще один раз
 order;порядок
 own;владелец
 parents;родители
+partner;партнер
+pay for her;платить за нее
+pay for it;платить за это
+pay for;платить за
 place;место
+point of view;точка зрения
 poor;бедный
+prefer;предпочитать
 profit;прибыль
+promise;обещать
 really;реально
+recommend;рекомендовать
+refuse;отказываться
+regularly;регулрно
 relax;отдыхать
 remember;помнить
 rich;богатый
+right now;прямо сейчас
+rule;правило
 say;сказать
+seem boring;кажется скучным
 seem;кажется
+share;делиться
+so many;так много
+solve this problem;режить эту проблему
 something;что-то
 sometimes;иногда
+son;сын
+song;песня
+spanish;испанский
+spend time;проводить время
+statement;утверждение
+student;студент
 success;успех
 support;поддрежка
 sure;уверенный
+tea;чай
 teach;преподавать
+test;тест
+thank;спасибо
 the same;так-же
+them;им
 there;там
 these;эти
 thing;вещь
 this;этот
 those;те
+together;вместе
+too easy;слишком легко
+train;тренировка
+travel;путешествовать
+truth;правда
 try;пытаться
 unimportant;неважно
+use the internet;использовать интернет
 useful;полезный
+useless;бесполезный
 usually;обычно
+very difficult;очень сложно
+very easy;очень легко
+visit;посетить
 want;хотеть
 watch;смотреть
-word;слово
-your;твой
-without;без
-grammar;грамматика
-correctly;правильно
-correct;правильный
-fast;быстро
-right now;прямо сейчас
-fluently;свободно
-again;снова
-one more time;еще один раз
-abroad;заграница
-another;другое
-thank;спасибо
-go here;пойти сюда
-go there;пойти туда
-buy;купить
-cup;чашка
-would;бы
-i would like;я хотел бы
-tea;чай
-drink;пить
-visit;посетить
-become;стать
-agree;согласен
+what kind of;какого рода
+what time;в какое время
+what;что
+when;когда
+where;где/куда
+who;кто
+why;почему
+with greate pleasure;с большим удовольствие
 with;с
-discuss;обсудить
-later;позже
-about;об
-interes;интересовать
-interest;интерес
-attract;привлекать
-future;будующее
-recommend;рекомендовать
-son;сын
-dauther;дочь
-change;изменить
-life;жизнь
-partner;партнер
-her;ее
-him;его
-my friend and i;я с моим другом
-call;звонок
-them;им
-believe;верить
-bring;приносить
-happiness;счастье
-hard;усердно
-harder;усерднее
-solve this problem;режить эту проблему
-rule;правило
-advice;совет
-less;меньше
-pay for her;платить за нее
-from time to time;вреия от времени
-go to;ходить куда-то
-so many;так много
-spanish;испанский
-order;порядок
-food;еда
+without;без
+word order;порядок слов
+word;слово
+work on;работать над
+worry;беспокоит
+would;бы
+your;твой
+zoo;зоопарк
 >
