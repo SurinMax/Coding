@@ -1,24 +1,46 @@
 <
+a waste of;потеря чего-то
 about;об
 abroad;заграница
+actor;актер
+actress;актриса
+adapt to;адаптироваться к
 add;добавлять
 adjective;прилагательное
+admire;восхищаться
+adult;взрослый
+adverstiment;реклама
 advice;совет
+afraid of;бояться 
+afternoon;день
 again;снова
+against;против
 agree;согласен
 also;так-же
 always;всегда
 and;и
+angry;злой
+announcement;объявление
 another;другое
 answer;ответ
+armchair;кресло
 article;заголовок
 as soon as possible;как можно скорее
 at all;во все
+at the moment;в настоящий момент
+attack;атаковать
 attract;привлекать
+autumn;осень
+bag;сумка
+be fond of;любить
+be keep on;быть увлеченным
 beautiful;красивый
 become;стать
+behavior;поведение
 believe;верить
+best;лучший
 better;лучше
+boy;мальчик
 boyfriend;парень
 brilliat result;блестящий резальтат
 bring;приносить
@@ -26,47 +48,92 @@ brother;брат
 but;но
 buy;купить
 call;звонок
+cave;пирог
+celebrate;праздновать
+chair;стул
 change;изменить
+cheap;дешевый
 check;проверять
+chinese;китайский
+choice;выбор
+clear;понятно
+clever;умный
+cold;холодно
+colleague;коллега
 come;приходить
+commuticate;общение
 complain;жаловаться
+comprete;соревноваться
+convinient;удобный
 correct;правильный
 correctly;правильно
+cost;стоит
 criricize;критиковать
 cup;чашка
+dangerous;опасно
+dark;темно
 dauther;дочь
 decision;решение
+delicious;очень вкусно
 depend on;зависит от
+designer;дизайнер
+detail;деталь
 different;различные
+difficult;сложно
 disagree;несоглашаться
 discuss;обсудить
+divorced;разведен
+do shopping;делать покупки
 dress;платье
 drink;пить
 early;рано
+easy;легко
+educated;образованный
+effectiv;эффективный
+elder brouther;старший брат
+energy;энергия
+enjoy;наслаждаться
 enough;достаточно
 esercise;упражнение
+evening;вечер
 everything;все
 exam;экзамен
 excellent;отлично
+expensive;дорогой
 explain;объяснять
+express;выражать
+expression;выражение
+famous;знаменитый
 far;далеко
 fast;быстро
+fat;толстый
 feel;чувствовать
+feeling;чувство
 find;находить
 finish;закачивать
 flat;квартира
 fluently;свободно
 food;еда
 for;для
+foreigh languages;иностранные языки
+formal;формальный
 free time;свободное время
 friend;друг
-from time to time;вреия от времени
+friendly;дружелюбный
+frightents;пагающе
+from italy;из италии
+from time to time;время от времени
+full of;полны чего-то
+funny;забавный
+furniture;мебель
 future;будующее
 get to;добирать до
 get up;вставать
 girlfriend;девушка
 give;давать
+glade to see;рад видеть
 go here;пойти сюда
+go shopping;ходить за покупками
 go there;пойти туда
 go to bed;ложиться спать
 go to the gym;ходить в зал
@@ -75,6 +142,7 @@ grammar;грамматика
 happen;случается
 happiness;счастье
 happy;счастлив
+hard-working;трудолюбивый
 hard;тяжело
 hard;усердно
 harder;усерднее
@@ -83,62 +151,122 @@ have at home;иметь дома
 hear;слышать
 her;ее
 here;здесь
+hight;высокий
 him;его
 homework;домашняя работа
+hot;горячо
 housework;работа по дому
 how;как
+husband;муж
+i am at home;я дома
+i am fond of;я обожаю
 i would like;я хотел бы
 ignore;игнорировать
+ill;болен
+illnes;болезнь
+imconvinied;неудобный
+immoral;безнарвственный
+impolite;невежливый
 important;важно
+impossible;невозможно
 improve;улучшить
 in that;в том
+in the bathroom;в ванне
+in the building;в здании
+in the kitchen;на кухне
+in the world;в мире
 in this;в этом
+ineffective;неэффективный
+informal;неформальный
 inspire;вдохновлять
 interes;интересовать
 interest;интерес
+it isn`t so;это не так
 kind;добрый
 knowledge;знания
 late;поздно
 later;позже
+laugh at;смеяться над
+lazy;ленивый
 learn;учиться
 leave home;уйти из дома
+leg;нога
 less;меньше
 let`s talk;давай поговорим
+level;уровень
 life;жизнь
 listen to music;слушать музыку
 listen to the radio;слушать радио
 listen to;слушать что-то
+littly;мало
 look for;искать
 look;выглядеть
+loud;громкий
+low;низкий
 lucky;везучий
+magazine;журнал
+man;мужчина
+married;в браке
+meaning;смысл
+meeting;встреча
 memory;память
+men;мужчины
 mention;упоминать
 miss;скучать
 mistake;ошибка
+moral;нравственный
+morning;утро
 motivate;мотивировать
 movie;фильм
 much more;намного больше
 my friend and i;я с моим другом
 my;мой
+natural;естественный
+near;близко
 negative form;отрицательная форма
+newspaper;газета
 noun;существительное
+now days;в настощее время
+obvious;очевидно
 offer;преложение
 often;часто
+on a business trip;командировка
+on holiday;выходной
+on the left;слева
+on the right;справа
 on time;во время
 one more time;еще один раз
+opinion;мнение
+optimistic;оптимистичный
 order;порядок
+other;другие
 own;владелец
+pair;пара
 parents;родители
 partner;партнер
+passion;страсть
 pay for her;платить за нее
 pay for it;платить за это
 pay for;платить за
+payments;платеж
+pen;ручка
+pencil;карандаш
+pessimistic;пессимистичный
 place;место
+pocket;карман
 point of view;точка зрения
+polite;вежливый
 poor;бедный
+popular;популярно
+possible;возможно
+power;сила
 prefer;предпочитать
+prepare for;подготовится к
 profit;прибыль
 promise;обещать
+rain;дождь
+rainy;дождливо
+realise it;осозновать это
 really;реально
 recommend;рекомендовать
 refuse;отказываться
@@ -147,39 +275,75 @@ relax;отдыхать
 remember;помнить
 rich;богатый
 right now;прямо сейчас
+rude;грубый
 rule;правило
+sad;грустный
+satisfied with;удовлетворен
 say;сказать
 seem boring;кажется скучным
 seem;кажется
+sell;продавать
+sentence;предложение в тексте
+separately;отдельно
+serious;серьезный
 share;делиться
+simplicity;простота
+singer;певица
+single;холост
+situation;ситуация
+slim;стройный
+small;маленький
+smart;смышленный
 so many;так много
 solve this problem;режить эту проблему
 something;что-то
 sometimes;иногда
 son;сын
 song;песня
+spain;испания
 spanish;испанский
+special offer;специальное преложение
 spend time;проводить время
+spring;весна
 statement;утверждение
+story;история
 student;студент
+stupid;тупой
 success;успех
+successful;успешный
+summer;лето
+sunny;солнечно
 support;поддрежка
 sure;уверенный
+surprising;удивительно
+take;брать
+talent;талант
+tall;высокий
+tasty;вкуснятина
 tea;чай
 teach;преподавать
+telented;талантливый
 test;тест
 thank;спасибо
+thanks to;благодаря кому-то
+the meaning of;значение
+the nearest;ближайший
 the same;так-же
 them;им
 there;там
 these;эти
+thin;худой
 thing;вещь
 this;этот
 those;те
+tired;уставший
+to;чтобы
 together;вместе
 too easy;слишком легко
 train;тренировка
 travel;путешествовать
+trousers;брюки
+trust;доверять
 truth;правда
 try;пытаться
 unimportant;неважно
@@ -191,6 +355,7 @@ very difficult;очень сложно
 very easy;очень легко
 visit;посетить
 want;хотеть
+warm;тепло
 watch;смотреть
 what kind of;какого рода
 what time;в какое время
@@ -199,14 +364,39 @@ when;когда
 where;где/куда
 who;кто
 why;почему
+wife;жена
+wind;ветер
+windy;ветренно
+winter;зина
+wise;мудрый
 with greate pleasure;с большим удовольствие
 with;с
 without;без
+woman;женщина
+women;женщины
+wonderful;прекрасный
 word order;порядок слов
 word;слово
 work on;работать над
-worry;беспокоит
+worry;беспокоить
+worse;хуже
 would;бы
+write it down;записывать
+wrong;неправильно
+year;год
+younger brother;младший брат
 your;твой
 zoo;зоопарк
+ant;муравей
+cat;кошка
+dog;собака
+egg;яйцо
+flag;флаг
+glass;стакан
+horse;лошать
+ink;чернила
+lamp;лампа
+mouse;мышь
+nest;гнездо
+rabbit;кролик
 >
